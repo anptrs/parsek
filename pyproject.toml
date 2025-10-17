@@ -1,0 +1,43 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "parsek"
+version = "2.2.1"
+description = "Pure Python, no-dependency, single source file parser combinator library"
+authors = [{name = "Anton Petersen", email = "quarkatron@gmail.com"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+requires-python = ">=3.10"
+dynamic = []
+
+[project.urls]
+Home = "https://github.com/anptrs/parsek"
+
+[tool.flit.module]
+name = "parsek"
+path = "src"
+
+[tool.flit.sdist]
+exclude = [
+    "tests/",
+    "utils/",
+    "htmlcov/",
+    ".vscode/",
+    "dist/",
+    "build/",
+    ".github/",
+    ".DS_Store",
+    ".gitignore",
+    "parsek_min.py",
+]
