@@ -69,8 +69,6 @@ $ python -m pytest --use-parsek-min
 ```sh
 # Build
 flit build
-# Dry run publish to TestPyPI
-flit publish --repository pypi --dry-run
 # Publish to PyPI
 flit publish
 ```
