@@ -209,6 +209,14 @@ def test_use_sets_combiner():
     assert r.value is False
 
 
+def test_string_is_cctype():
+    r = Parser.Val("abc")
+    assert r.isspace() is False
+    r = Parser.Val("   ")
+    assert r.isspace() is True
+    r = Parser.Val(42)
+    assert r.isspace() is False
+
 def test_string_transforms_on_str():
     r = Parser.Val("  AbC  ")
     r.strip().lower()

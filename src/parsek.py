@@ -416,6 +416,30 @@ class Val:
         _m.__doc__ = f"Apply {public_name} to contained string value."
         return _m
 
+    @staticmethod
+    def _str_is_cc(op: str): # apply and return result of str is* methods
+        str_meth = getattr(str, op)
+        def _m(self):
+            if isinstance(v := self.v, str):
+                return str_meth(v)
+            return False
+        _m.__name__ = op
+        _m.__qualname__ = f"Val.{op}"
+        _m.__doc__ = f"Returns True if contained string value {op}."
+        return _m
+    isalnum      = _str_is_cc.__func__('isalnum')
+    isalpha      = _str_is_cc.__func__('isalpha')
+    isascii      = _str_is_cc.__func__('isascii')
+    isdecimal    = _str_is_cc.__func__('isdecimal')
+    isdigit      = _str_is_cc.__func__('isdigit')
+    isidentifier = _str_is_cc.__func__('isidentifier')
+    islower      = _str_is_cc.__func__('islower')
+    isnumeric    = _str_is_cc.__func__('isnumeric')
+    isprintable  = _str_is_cc.__func__('isprintable')
+    isspace      = _str_is_cc.__func__('isspace')
+    istitle      = _str_is_cc.__func__('istitle')
+    isupper      = _str_is_cc.__func__('isupper')
+
     casefold = _str_transform.__func__('casefold')
     lower    = _str_transform.__func__('lower')
     lstrip   = _str_transform.__func__('lstrip')
