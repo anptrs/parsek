@@ -3,14 +3,6 @@
 All notable changes to this project are documented here.
 This project follows Keep a Changelog and Semantic Versioning.
 
-## [Unreleased]
-### Added
--
-### Changed
--
-### Fixed
--
-
 ## [2.3.1] - 2025-10-31
 ### Added
 - Val: added character predicate helpers: isalpha(), isspace(), and related methods (e.g., isalnum(), isdigit(), islower(), isupper()).
@@ -33,6 +25,5 @@ Initial public release.
 - Achieved 100% statement and branch coverage.
 - Tracing internals cleanup (including lambda source parsing).
 
-[Unreleased]: https://github.com/anptrs/parsek/compare/v2.3.1...HEAD
 [2.3.1]: https://github.com/anptrs/parsek/releases/tag/v2.3.1
 [2.2.1]: https://github.com/anptrs/parsek/releases/tag/v2.2.1
