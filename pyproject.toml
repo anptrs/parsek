@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "parsek"
-version = "2.2.1"
+version = "2.3.1"
 description = "Pure Python, no-dependency, single source file parser combinator library"
 authors = [{name = "Anton Petersen", email = "quarkatron@gmail.com"}]
 readme = "README.md"
